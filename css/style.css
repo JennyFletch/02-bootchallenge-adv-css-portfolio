@@ -1,0 +1,77 @@
+:root {
+    --pagemargin:5%;
+}
+
+body {
+    font-size:18px;
+    font-family:'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family:'Yanone Kaffeesatz', sans-serif;
+    letter-spacing:0.05em; 
+    text-transform:uppercase;
+}
+
+header {
+    background-color:#222;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    padding:0 var(--pagemargin);
+    align-items:center;
+}
+
+header h1 {
+    color:#fff;
+    font-size:5rem;
+    padding:12px 0 0;
+    margin:0;
+}
+
+header ul {
+    margin:0;
+    padding:0;
+    list-style:none; 
+}
+
+header ul li {
+    margin:0 0 0 25px;
+    padding:0;
+    display:inline;
+}
+
+header ul li a { 
+    color:#fff;
+    text-decoration:none;
+    font-size:1.3rem;
+}
+
+section.hero {
+    background-color:#000;
+    background-image:url(../images/flower.png);
+    background-repeat:no-repeat;
+    background-size:100% auto; 
+    background-position:right top;
+    padding:0 var(--pagemargin);
+    height:386px;
+}
+
+section.hero h2 {
+    margin:0;
+    padding:20px 0;
+    color:#999;
+    font-size:2.5rem;
+    font-weight:200;
+    display:flex;
+    align-items:flex-end;
+}
+
+
+
+
+@media (max-width:1240px) {
+    section.hero {
+        height:300px;
+    }
+}
