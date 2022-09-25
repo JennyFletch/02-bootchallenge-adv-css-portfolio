@@ -169,6 +169,7 @@ div[class^="card"]:nth-child(odd) {
     padding:8px 20px;
     width:300px;
     max-width:100%;
+    overflow-x:hidden;
     cursor:pointer;
     flex-direction:column;
 }
@@ -177,6 +178,7 @@ div[class^="card"]:nth-child(odd) {
     margin:0;
     padding:0;
     align-self:flex-start;
+    max-width:100%;
 }
 
 .card-info p { 
