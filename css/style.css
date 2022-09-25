@@ -214,11 +214,13 @@ div[class^="card"]:nth-child(odd) {
 
 @media (max-width:1200px) {
     header h1 { 
-        font-size:4.5rem; 
+        font-size:4.25rem; 
     }
+
     header ul li a {
         font-size:1.1rem;
     }
+
     section.hero {
         height:260px;
     }
@@ -251,5 +253,15 @@ div[class^="card"]:nth-child(odd) {
     div[class^="card"]:nth-child(even), div[class^="card"]:nth-child(odd) {
         margin-left:0;
         margin-right:0;
+    }
+}
+
+@media (max-width:480px) {
+    header h1 { 
+        font-size:3.75rem; 
+    }
+
+    header ul li a {
+        font-size:.85rem;
     }
 }
