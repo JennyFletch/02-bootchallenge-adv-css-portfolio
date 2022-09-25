@@ -17,6 +17,17 @@ p {
     line-height:150%;
 }
 
+a {
+    color:#000;
+    transition:color 0.3s ease;
+    font-weight:600;
+}
+
+a:hover {
+    color:#cc0000; 
+    text-decoration:underline;
+} 
+
 header {
     background-color:#222;
     display:flex;
@@ -51,6 +62,11 @@ header ul li a {
     font-size:1.3rem;
 }
 
+header ul li a:hover { 
+    color:#fff;
+    text-decoration:underline;
+}
+
 section.hero {
     background-color:#000;
     background-image:url(../images/flower.png);
@@ -59,6 +75,8 @@ section.hero {
     background-position:right top;
     padding:0 var(--pagemargin);
     height:386px;
+    display:flex;
+    flex-direction:column-reverse;
 }
 
 section.hero h2 {
@@ -67,11 +85,9 @@ section.hero h2 {
     color:#999;
     font-size:2.5rem;
     font-weight:200;
-    display:flex;
-    align-items:flex-end;
 }
 
-#about h3, #work h3 {
+#about h3, #work h3, #contact h3 {
     font-size:2.5rem;
     font-weight:200;
     width:100%;
@@ -86,24 +102,48 @@ section.hero h2 {
     display:flex;
     direction:row;
     flex-wrap:wrap;
+    padding:0 var(--pagemargin);
+}
+
+#work a:hover {
+    text-decoration:none;
+    color:#000;
 }
 
 div[class^="card"] {
-    background-size:100% auto; 
+    background-size:cover; 
     background-position:center;
     background-repeat:no-repeat;
+    filter: grayscale(100%);
+    transition:filter 0.3s ease;
+    margin-bottom:20px;
+    display:flex;
+    align-items:flex-end;
+}
+div[class^="card"]:hover {
+    filter: grayscale(0);
+    text-decoration:none;
+}
+
+div.card-2, div.card-3, div.card-4, div.card-5 {
+    width:48%;
+    height:200px;
+}
+
+div[class^="card"]:nth-child(even) {
+    margin-left:2%;
+}
+
+div[class^="card"]:nth-child(odd) {
+    margin-left:0;
+    margin-right:2%;
 }
 
 .card-1 { 
     background-image:url(../images/sample1.png);
     width:100%;
     height:400px;
-}
-
-div.card-2, div.card-3, div.card-4, div.card-5 {
-    width:40%;
-    margin:5%;
-    height:200px;
+    margin-left:0 !important;
 }
 
 .card-2 {
@@ -111,15 +151,59 @@ div.card-2, div.card-3, div.card-4, div.card-5 {
 }
 
 .card-3 {
-    background-image:url(../images/sample2.png);
+    background-image:url(../images/sample3.png);
 }
 
 .card-4 {
-    background-image:url(../images/sample2.png);
+    background-image:url(../images/sample4.png);
 }
 
 .card-5 {
-    background-image:url(../images/sample2.png);
+    background-image:url(../images/sample5.png);
+}
+
+.card-info {
+    background-color:#000;
+    color:#fff;
+    font-size:1.25rem;
+    padding:8px 20px;
+    width:300px;
+    max-width:100%;
+    cursor:pointer;
+    flex-direction:column;
+}
+
+.card-info h4, .card-info p {
+    margin:0;
+    padding:0;
+    align-self:flex-start;
+}
+
+.card-info p { 
+    font-family:'Yanone Kaffeesatz', sans-serif;
+    letter-spacing:0.05em; 
+    text-transform:uppercase;
+    font-weight:200;
+}
+
+#contact {
+    padding:40px var(--pagemargin) 80px;
+    background-color:#000;
+    margin-top:60px;
+}
+
+#contact h3, #contact p, #contact a {
+    color:#fff;
+    text-decoration:none;
+}
+
+#contact a:hover { 
+    color:#cc0000; 
+}
+
+#contact h3{
+    color:#fff;
+    border-bottom:2px solid #fff;
 }
 
 @media (min-width:1400px) {
@@ -128,8 +212,44 @@ div.card-2, div.card-3, div.card-4, div.card-5 {
     }
 }
 
-@media (max-width:1240px) {
+@media (max-width:1200px) {
+    header h1 { 
+        font-size:4.5rem; 
+    }
+    header ul li a {
+        font-size:1.1rem;
+    }
     section.hero {
         height:260px;
+    }
+}
+
+@media (max-width:1024px) {
+    header {
+        flex-direction:column;  
+    }
+
+    header h1 { 
+        align-self:flex-start;
+    }
+
+    header nav {
+        align-self:flex-start;
+        padding:16px 0;
+    }
+
+    header nav ul li { 
+        margin-left:0; 
+        margin-right:25px;
+    }
+
+    div.card-1, div.card-2, div.card-3, div.card-4, div.card-5 {
+        width:100%;
+        height:180px;
+    }
+    
+    div[class^="card"]:nth-child(even), div[class^="card"]:nth-child(odd) {
+        margin-left:0;
+        margin-right:0;
     }
 }
