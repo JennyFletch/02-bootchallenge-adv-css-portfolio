@@ -143,14 +143,14 @@ div[class^="card"]:nth-child(odd) {
 }
 
 .card-1 { 
-    background-image:url(../images/sample1.png);
+    background-image:url(../images/beerfinder.png);
     width:100%;
     height:400px;
     margin-left:0 !important;
 }
 
 .card-2 {
-    background-image:url(../images/sample2.png);
+    background-image:url(../images/sample1.png);
 }
 
 .card-3 {
