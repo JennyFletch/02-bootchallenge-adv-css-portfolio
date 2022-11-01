@@ -12,7 +12,7 @@ https://jennyfletch.github.io/02-bootchallenge-adv-css-portfolio/
 
 <br />
 
-![Alt text](images/screenshot.png?raw=true "Title")
+![Alt text](images/screenshot1022.png?raw=true "Jennifer Fletcher Web Development Portfolio - screenshot")
 
 <br />
 

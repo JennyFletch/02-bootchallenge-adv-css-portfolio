@@ -115,7 +115,7 @@ section.hero h2 {
 
 div[class^="card"] {
     background-size:cover; 
-    background-position:center;
+    background-position:center top;
     background-repeat:no-repeat;
     filter: grayscale(100%);
     transition:filter 0.3s ease;
